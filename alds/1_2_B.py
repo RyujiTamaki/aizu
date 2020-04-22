@@ -1,4 +1,7 @@
-def selection_sort(A):
+from typing import List
+
+
+def selection_sort(A: List[int]):
     sw = 0
     for i in range(len(A) - 1):
         minj = i
@@ -16,9 +19,9 @@ def selection_sort(A):
 
 
 N = input()
-A = list(map(int, input().split()))
+A: List[int] = list(map(int, input().split()))
 
 sw = selection_sort(A)
-A = [str(i) for i in A]
-print(" ".join(A))
+str_A: List[str] = [str(i) for i in A]
+print(" ".join(str_A))
 print(sw)

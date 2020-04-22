@@ -1,10 +1,13 @@
-def trace(A):
+from typing import List
+
+
+def trace(A: List[int]):
     a = " ".join([str(i) for i in A])
     print(a)
     return None
 
 
-def insertion_sort(A):
+def insertion_sort(A: List[int]):
     S = A.copy()
     for i in range(1, len(A)):
         v = S[i]
@@ -18,7 +21,7 @@ def insertion_sort(A):
 
 
 N = input()
-A = list(map(int, input().split()))
+A: List[int] = list(map(int, input().split()))
 
 trace(A)
 insertion_sort(A)

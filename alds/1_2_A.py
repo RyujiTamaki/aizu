@@ -1,4 +1,7 @@
-def bubble_sort(A):
+from typing import List
+
+
+def bubble_sort(A: List[int]):
     sw = 0
     flag = True
     i = 0
@@ -16,9 +19,9 @@ def bubble_sort(A):
 
 
 N = input()
-A = list(map(int, input().split()))
+A: List[int] = list(map(int, input().split()))
 
 sw = bubble_sort(A)
-A = [str(i) for i in A]
-print(" ".join(A))
+str_A: List[str] = [str(i) for i in A]
+print(" ".join(str_A))
 print(sw)
