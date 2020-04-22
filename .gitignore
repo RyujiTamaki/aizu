@@ -1,5 +1,3 @@
-# cpp
-a.out
-
 # python
 .venv/
+.mypy_cache/
