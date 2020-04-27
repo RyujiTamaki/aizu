@@ -1,4 +1,4 @@
-from typing import List
+from collections import deque
 import sys
 
 
@@ -19,7 +19,7 @@ class Process:
 input = sys.stdin.readline
 N, q = map(int, input().split())
 
-queue: List[Process] = []
+queue = deque()
 
 for _ in range(N):
     s = input().split()
@@ -28,7 +28,7 @@ for _ in range(N):
 
 elaps = 0
 while len(queue) > 0:
-    process = queue.pop(0)
+    process = queue.popleft()
     c = min(q, process.time)
     process = Process(name=process.name, time=process.time - c)
     elaps += c
